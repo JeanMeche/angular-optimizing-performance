@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { EmployeeListModule } from './employee-list/employee-list.module';
+import { CalculatePipe } from './pipes/calculate.pipe';
+
+import { ListGenerator } from './shared/list-generator.service';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  imports: [BrowserModule, EmployeeListModule],
+  providers: [ListGenerator],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
