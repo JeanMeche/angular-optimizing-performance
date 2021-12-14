@@ -12,7 +12,7 @@ const fibonacci = (num: number): number => {
     name: 'calculate'
 })
 export class CalculatePipe implements PipeTransform {
-    @memo()
+    // @memo()
     transform(val: number) {
         return fibonacci(val);
     }
